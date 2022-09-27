@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landmark</title>
+    <!--
+        For more customization options, we would advise
+        you to build your TailwindCSS from the source.
+        https://tailwindcss.com/docs/installation
+    -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.9.2/tailwind.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Small CSS to Hide elements at 1520px size -->
+    <style>
+      @media (max-width: 1520px) {
+        .left-svg {
+          display: none;
+        }
+      }
+
+      /* small css for the mobile nav close */
+      #nav-mobile-btn.close span:first-child {
+        transform: rotate(45deg);
+        top: 4px;
+        position: relative;
+        background: #a0aec0;
+      }
+
+      #nav-mobile-btn.close span:nth-child(2) {
+        transform: rotate(-45deg);
+        margin-top: 0px;
+        background: #a0aec0;
+      }
+    </style>
+  </head>
+  <body class="overflow-x-hidden antialiased">
+    <!-- Header Section -->
+    <header class="relative z-50 w-full h-24">
+      <div
+        class="container flex items-center justify-center h-full max-w-6xl px-8 mx-auto sm:justify-between xl:px-0"
+      >
+        <a
+          href="/"
+          class="relative flex items-center inline-block h-5 h-full font-black leading-none"
+        >
+          <span class="ml-3 text-xl text-gray-800"
+            >Sylput<span class="text-pink-500">.</span></span
+          >
+        </a>
+
+        <nav
+          id="nav"
+          class="absolute top-0 left-0 z-50 flex flex-col items-center justify-between hidden w-full h-64 pt-5 mt-24 text-sm text-gray-800 bg-white border-t border-gray-200 md:w-auto md:flex-row md:h-24 lg:text-base md:bg-transparent md:mt-0 md:border-none md:py-0 md:flex md:relative"
+        >
+          <a
+            href="#"
+            class="ml-0 mr-0 font-bold duration-100 md:ml-12 md:mr-3 lg:mr-8 transition-color hover:text-indigo-600"
+            >Home</a
+          >
+          <a
+            href="#about"
+            class="ml-0 mr-0 font-bold duration-100 md:ml-12 md:mr-3 lg:mr-8 transition-color hover:text-indigo-600"
+            >About</a
+          >
+          <a
+            href="#education"
+            class="mr-0 font-bold duration-100 md:mr-3 lg:mr-8 transition-color hover:text-indigo-600"
+            >Education</a
+          >
+          <a
+            href="#services"
+            class="mr-0 font-bold duration-100 md:mr-3 lg:mr-8 transition-color hover:text-indigo-600"
+            >Portofolio</a
+          >
+          <a
+            href="#services"
+            class="font-bold duration-100 transition-color hover:text-indigo-600"
+            >Services</a
+          >
+          <div
+            class="flex flex-col block w-full font-medium border-t border-gray-200 md:hidden"
+          >
+            <a
+              href="#contact"
+              class="w-full py-2 inline-block font-bold w-full px-5 py-3 text-sm leading-none text-center text-indigo-500 bg-indigo-700"
+              >Contact </a
+            >
+            <a
+              href="#_"
+              class="relative inline-block w-full px-5 py-3 text-sm leading-none text-center text-white bg-indigo-700 fold-bold"
+              >Hire me</a
+            >
+          </div>
+        </nav>
+
+        <div
+          class="absolute left-0 flex-col items-center justify-center hidden w-full pb-8 mt-48 border-b border-gray-200 md:relative md:w-auto md:bg-transparent md:border-none md:mt-0 md:flex-row md:p-0 md:items-end md:flex md:justify-between"
+        >
+          <a
+            href="#contact"
+            class="relative z-40 px-3 py-2 mr-0 text-sm font-bold text-pink-500 md:px-5 lg:text-indigo sm:mr-3 md:mt-0"
+            >contact</a
+          >
+          <a
+            href="#_"
+            class="relative z-40 inline-block w-auto h-full px-5 py-3 text-sm font-bold leading-none text-white transition-all transition duration-100 duration-300 bg-indigo-700 rounded shadow-md fold-bold lg:bg-white lg:text-indigo-700 sm:w-full lg:shadow-none hover:shadow-xl"
+            >Get Started</a
+          >
+          <svg
+            class="absolute top-0 left-0 hidden w-screen max-w-3xl -mt-64 -ml-12 lg:block"
+            viewBox="0 0 818 815"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+          >
+            <defs>
+              <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="c">
+                <stop stop-color="#E614F2" offset="0%" />
+                <stop stop-color="#FC3832" offset="100%" />
+              </linearGradient>
+              <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="f">
+                <stop stop-color="#657DE9" offset="0%" />
+                <stop stop-color="#1C0FD7" offset="100%" />
+              </linearGradient>
+              <filter
+                x="-4.7%"
+                y="-3.3%"
+                width="109.3%"
+                height="109.3%"
+                filterUnits="objectBoundingBox"
+                id="a"
+              >
+                <feOffset dy="8" in="SourceAlpha" result="shadowOffsetOuter1" />
+                <feGaussianBlur
+                  stdDeviation="8"
+                  in="shadowOffsetOuter1"
+                  result="shadowBlurOuter1"
+                />
+                <feColorMatrix
+                  values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0"
+                  in="shadowBlurOuter1"
+                />
+              </filter>
+              <filter
+                x="-4.7%"
+                y="-3.3%"
+                width="109.3%"
+                height="109.3%"
+                filterUnits="objectBoundingBox"
+                id="d"
+              >
+                <feOffset dy="8" in="SourceAlpha" result="shadowOffsetOuter1" />
+                <feGaussianBlur
+                  stdDeviation="8"
+                  in="shadowOffsetOuter1"
+                  result="shadowBlurOuter1"
+                />
+                <feColorMatrix
+                  values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"
+                  in="shadowBlurOuter1"
+                />
+              </filter>
+              <!-- <path
+                            d="M160.52 108.243h497.445c17.83 0 24.296 1.856 30.814 5.342 6.519 3.486 11.635 8.602 15.12 15.12 3.487 6.52 5.344 12.985 5.344 30.815v497.445c0 17.83-1.857 24.296-5.343 30.814-3.486 6.519-8.602 11.635-15.12 15.12-6.52 3.487-12.985 5.344-30.815 5.344H160.52c-17.83 0-24.296-1.857-30.814-5.343-6.519-3.486-11.635-8.602-15.12-15.12-3.487-6.52-5.343-12.985-5.343-30.815V159.52c0-17.83 1.856-24.296 5.342-30.814 3.486-6.519 8.602-11.635 15.12-15.12 6.52-3.487 12.985-5.343 30.815-5.343z"
+                            id="b" />
+                        <path
+                            d="M159.107 107.829H656.55c17.83 0 24.296 1.856 30.815 5.342 6.518 3.487 11.634 8.602 15.12 15.12 3.486 6.52 5.343 12.985 5.343 30.816V656.55c0 17.83-1.857 24.296-5.343 30.815-3.486 6.518-8.602 11.634-15.12 15.12-6.519 3.486-12.985 5.343-30.815 5.343H159.107c-17.83 0-24.297-1.857-30.815-5.343-6.519-3.486-11.634-8.602-15.12-15.12-3.487-6.519-5.343-12.985-5.343-30.815V159.107c0-17.83 1.856-24.297 5.342-30.815 3.487-6.519 8.602-11.634 15.12-15.12 6.52-3.487 12.985-5.343 30.816-5.343z"
+                            id="e" /> -->
+            </defs>
+            <g fill="none" fill-rule="evenodd" opacity=".9">
+              <g transform="rotate(65 416.452 409.167)">
+                <use fill="#000" filter="url(#a)" xlink:href="#b" />
+                <use fill="url(#c)" xlink:href="#b" />
+              </g>
+              <g transform="rotate(29 421.929 414.496)">
+                <use fill="#000" filter="url(#d)" xlink:href="#e" />
+                <use fill="url(#f)" xlink:href="#e" />
+              </g>
+            </g>
+          </svg>
+        </div>
+
+        <div
+          id="nav-mobile-btn"
+          class="absolute top-0 right-0 z-50 block w-6 mt-8 mr-10 cursor-pointer select-none md:hidden sm:mt-10"
+        >
+          <span
+            class="block w-full h-1 mt-2 duration-200 transform bg-gray-800 rounded-full sm:mt-1"
+          ></span>
+          <span
+            class="block w-full h-1 mt-1 duration-200 transform bg-gray-800 rounded-full"
+          ></span>
+        </div>
+      </div>
+    </header>
+    <!-- End Header Section-->
+
+    <!-- BEGIN HERO SECTION -->
+    <div
+      class="relative items-center justify-center w-full overflow-x-hidden lg:pt-40 lg:pb-40 xl:pt-40 xl:pb-64"
+    >
+      <div
+        class="container flex flex-col items-center justify-between h-full max-w-6xl px-8 mx-auto -mt-32 lg:flex-row xl:px-0"
+      >
+        <div
+          class="z-30 flex flex-col items-center w-full max-w-xl pt-48 text-center lg:items-start lg:w-1/2 lg:pt-20 xl:pt-40 lg:text-left"
+        >
+          <h1
+            class="relative mb-4 text-3xl font-black leading-tight text-gray-900 sm:text-5xl xl:mb-8"
+          >
+            Hi There..
+          </h1>
+          <h1
+            class="relative mb-4 text-3xl font-black leading-tight text-indigo-500 sm:text-4xl xl:mb-8"
+          >
+            I am Sylfia Putri
+          </h1>
+          <p
+            class="pr-0 mb-8 text-base text-gray-600 sm:text-lg xl:text-xl lg:pr-20"
+          >
+            I am Front End Engginering
+          </p>
+          <a
+            href="https://drive.google.com/file/d/1wxGYbG8W59GX4Hxu04fYqgQVv08TQVfy/view?usp=sharing"
+            class="relative self-start inline-block w-auto px-8 py-4 mx-auto mt-0 text-base font-bold text-white bg-indigo-600 border-t border-gray-200 rounded-md shadow-xl sm:mt-1 fold-bold lg:mx-0"
+            >Dwonlod CV</a
+          >
+          <!-- Integrates with section -->
+          <svg
+            class="absolute left-0 max-w-md mt-24 -ml-64 left-svg"
+            viewBox="0 0 423 423"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+          >
+            <defs>
+              <linearGradient
+                x1="100%"
+                y1="0%"
+                x2="4.48%"
+                y2="0%"
+                id="linearGradient-1"
+              >
+                <stop stop-color="#5C54DB" offset="0%" />
+                <stop stop-color="#6A82E7" offset="100%" />
+              </linearGradient>
+              <filter
+                x="-9.3%"
+                y="-6.7%"
+                width="118.7%"
+                height="118.7%"
+                filterUnits="objectBoundingBox"
+                id="filter-3"
+              >
+                <feOffset dy="8" in="SourceAlpha" result="shadowOffsetOuter1" />
+                <feGaussianBlur
+                  stdDeviation="8"
+                  in="shadowOffsetOuter1"
+                  result="shadowBlurOuter1"
+                />
+                <feColorMatrix
+                  values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"
+                  in="shadowBlurOuter1"
+                />
+              </filter>
+              <rect
+                id="path-2"
+                x="63"
+                y="504"
+                width="300"
+                height="300"
+                rx="40"
+              />
+            </defs>
+            <g
+              id="Page-1"
+              stroke="none"
+              stroke-width="1"
+              fill="none"
+              fill-rule="evenodd"
+              opacity=".9"
+            >
+              <g id="Desktop-HD" transform="translate(-39 -531)">
+                <g id="Hero" transform="translate(43 83)">
+                  <g id="Rectangle-6" transform="rotate(45 213 654)">
+                    <use
+                      fill="#000"
+                      filter="url(#filter-3)"
+                      xlink:href="#path-2"
+                    />
+                    <use fill="url(#linearGradient-1)" xlink:href="#path-2" />
+                  </g>
+                </g>
+              </g>
+            </g>
+          </svg>
+        </div>
+        <div
+          class="relative z-50 flex flex-col items-end justify-center w-full h-full lg:w-1/2 ms:pl-10"
+        >
+          <div
+            class="container relative left-0 w-full max-w-4xl lg:absolute xl:max-w-6xl lg:w-screen"
+          >
+            <img
+              src="assets/putri.png"
+              width="300px"
+              height="300px"
+              align="center"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- HERO SECTION END -->
+
+    <!-- BEGIN FEATURES SECTION -->
+    <div
+      id="about"
+      class="relative w-full px-8 py-10 border-t border-gray-200 md:py-16 lg:py-24 xl:py-40 xl:px-0">
+      <div
+        class="container flex flex-col items-center justify-between h-full max-w-6xl mx-auto"
+      >
+        <h2
+          class="my-5 text-3xl font-medium tracking-tight text-indigo-500 uppercase"
+        >
+          About
+        </h2>
+        <p
+          class="pr-0 mb-8 text-base text-gray-600 sm:text-lg xl:text-xl lg:pr-20"
+        >
+          I am a student at Singaperbangsa Karawang University, Informatics
+          Engineering Study Program. I really like web developers, especially in
+          the field of front-end engineering and UI/UX. I also like to learn new
+          things, am very responsible for my work, cooperate in a team, can
+          manage time, and have critical thinking. As a quick learner, I easy to
+          make new friends. I also have good communication, am humble, friendly,
+          and easily adaptable.
+        </p>
+    </div>
+
+      <div id="education">
+      <h2
+      class="my-5 text-3xl font-medium tracking-tight text-black-900 uppercase items-center justify-center" align="center">
+      My education</h2>
+        <div class="flex flex-col w-full mt-0 lg:flex-row sm:mt-10 lg:mt-20">
+          <div
+            class="w-full max-w-md p-4 mx-auto mb-0 sm:mb-16 lg:mb-0 lg:w-1/3"
+          >
+            <div
+              class="relative flex flex-col items-center justify-center w-full h-full p-20 mr-5 rounded-lg"
+            >
+            <svg
+                class="absolute w-full h-full text-gray-100 fill-current"
+                viewBox="0 0 378 410"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g>
+                  <g>
+                    <path
+                      d="M305.9 14.4c23.8 24.6 16.3 84.9 26.6 135.1 10.4 50.2 38.6 90.3 43.7 137.8 5.1 47.5-12.8 102.4-50.7 117.4-37.9 15.1-95.7-9.8-151.7-12.2-56.1-2.5-110.3 17.6-130-3.4-19.7-20.9-4.7-82.9-11.5-131.2C25.5 209.5-3 174.7 1.2 147c4.2-27.7 41-48.3 75-69.6C110.1 56.1 141 34.1 184 17.5c43.1-16.6 98.1-27.7 121.9-3.1z"
+                    />
+                  </g>
+                </g>
+              </svg>
+              <h4 class="relative mt-6 text-lg font-bold" align="center">Universitas Singaperbangsa Karawang</h4>
+              <p class="relative mt-2 text-base text-center text-gray-600">
+                Automate your workflow with these top of the line marketing
+                tools.
+              </p>
+            </div>
+          </div>
+          <div class="w-full max-w-md p-4 mx-auto mb-16 lg:mb-0 lg:w-1/3">
+            <div
+              class="relative flex flex-col items-center justify-center w-full h-full p-20 mr-5 rounded-lg"
+            >
+              <svg
+                class="absolute w-full h-full text-gray-100 fill-current"
+                viewBox="0 0 378 410"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g>
+                  <g>
+                    <path
+                      d="M305.9 14.4c23.8 24.6 16.3 84.9 26.6 135.1 10.4 50.2 38.6 90.3 43.7 137.8 5.1 47.5-12.8 102.4-50.7 117.4-37.9 15.1-95.7-9.8-151.7-12.2-56.1-2.5-110.3 17.6-130-3.4-19.7-20.9-4.7-82.9-11.5-131.2C25.5 209.5-3 174.7 1.2 147c4.2-27.7 41-48.3 75-69.6C110.1 56.1 141 34.1 184 17.5c43.1-16.6 98.1-27.7 121.9-3.1z"
+                    />
+                  </g>
+                </g>
+              </svg>
+             
+              <h4 class="relative mt-6 text-lg font-bold">
+                SMAN 1 Klari
+              </h4>
+              <p class="relative mt-2 text-base text-center text-gray-600">
+                Our smart notifications will notify you when users convert.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- END FEATURES SECTION -->
+
+     <!-- Section services -->
+
+<div class="Services" id="services">
+  <h2
+      class="my-5 text-3xl font-medium tracking-tight text-indigo-500 uppercase text-center">Services
+    </h2>
+    <div class="flex justify-center ">
+      <div class="block p-6 rounded-lg shadow-lg bg-white max-w-sm">
+        <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2 text-center">Front End Enginering</h5>
+        <p class="text-gray-700 text-base mb-4">
+          create a User Interface, and User Experience by maximizing the user experience in using an application or website
+        </p>
+      </div>
+      <div class="block p-6 rounded-lg shadow-lg bg-white max-w-sm">
+        <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2 text-center">UI UX Design</h5>
+        <p class="text-gray-700 text-base mb-4">
+          create a User Interface, and User Experience by maximizing the user experience in using an application or website
+        </p>
+      </div>
+    </div>
+</div>
+<br><br>
+    <!-- Portofolio -->
+    <div id="contact">
+      <h2
+        class="my-5 text-3xl font-medium tracking-tight text-indigo-500 uppercase"
+        align="center"
+      >
+        my potofolio
+      </h2>
+    <section class="overflow-hidden text-gray-700  ">
+      <div class="container px-5 py-2 mx-auto lg:pt-12 lg:px-32">
+        <div class="flex flex-wrap -m-1 md:-m-2">
+          <div class="flex flex-wrap w-1/3">
+            <div class="w-full p-1 md:p-2">
+              <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp">
+            </div>
+          </div>
+          <div class="flex flex-wrap w-1/3">
+            <div class="w-full p-1 md:p-2">
+              <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(74).webp">
+            </div>
+          </div>
+          <div class="flex flex-wrap w-1/3">
+            <div class="w-full p-1 md:p-2">
+              <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(75).webp">
+            </div>
+          </div>
+          <div class="flex flex-wrap w-1/3">
+            <div class="w-full p-1 md:p-2">
+              <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(70).webp">
+            </div>
+          </div>
+          <div class="flex flex-wrap w-1/3">
+            <div class="w-full p-1 md:p-2">
+              <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(76).webp">
+            </div>
+          </div>
+          <div class="flex flex-wrap w-1/3">
+            <div class="w-full p-1 md:p-2">
+              <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(72).webp">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Portofolio -->
+
+     
+
+    <!-- Form -->
+    <div id="contact">
+    <h2
+      class="my-5 text-3xl font-medium tracking-tight text-indigo-500 uppercase"
+      align="center"
+    >
+      contact me
+    </h2>
+      <path
+        fill="currentColor"
+        d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+      />
+    </svg>
+    <div class="flex items-center justify-center p-12">
+
+      <div class="mx-auto w-full max-w-[550px]">
+        <form action="https://formbold.com/s/FORM_ID" method="POST">
+          <div class="mb-5">
+            <label
+              for="name"
+              class="mb-3 block text-base font-medium text-[#07074D]"
+            >
+              Full Name
+            </label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Full Name"
+              class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+            />
+          </div>
+          <div class="mb-5">
+            <label
+              for="email"
+              class="mb-3 block text-base font-medium text-[#07074D]"
+            >
+              Email Address
+            </label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="example@domain.com"
+              class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+            />
+          </div>
+          <div class="mb-5">
+            <label
+              for="subject"
+              class="mb-3 block text-base font-medium text-[#07074D]"
+            >
+              Subject
+            </label>
+            <input
+              type="text"
+              name="subject"
+              id="subject"
+              placeholder="Enter your subject"
+              class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+            />
+          </div>
+          <div class="mb-5">
+            <label
+              for="message"
+              class="mb-3 block text-base font-medium text-[#07074D]"
+            >
+              Message
+            </label>
+            <textarea
+              rows="4"
+              name="message"
+              id="message"
+              placeholder="Type your message"
+              class="w-full resize-none rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+            ></textarea>
+          </div>
+          <div>
+            <button
+              class="hover:shadow-form rounded-md bg-[#6A64F1] py-3 px-8 text-base font-semibold text-white outline-none"
+            >
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- footer -->
+  <footer class="text-center text-white" style="background-color: #f1f1f1;">
+    <div class="container pt-9">
+      <div class="flex justify-center mb-9">
+        <a href="#!" class="mr-9 text-gray-800">
+          <svg
+            aria-hidden="true"
+            focusable="false"
+            data-prefix="fab"
+            data-icon="facebook-f"
+            class="svg-inline--fa fa-facebook-f w-2.5"
+            role="img"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 320 512"
+          >
+            <path
+              fill="currentColor"
+              d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"
+            ></path>
+          </svg>
+        </a>
+        <a href="#!" class="mr-9 text-gray-800">
+          <svg
+            aria-hidden="true"
+            focusable="false"
+            data-prefix="fab"
+            data-icon="twitter"
+            class="svg-inline--fa fa-twitter w-4"
+            role="img"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 512 512"
+          >
+            <path
+              fill="currentColor"
+              d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"
+            ></path>
+          </svg>
+        </a>
+        <a href="#!" class="mr-9 text-gray-800">
+          <svg
+            aria-hidden="true"
+            focusable="false"
+            data-prefix="fab"
+            data-icon="google"
+            class="svg-inline--fa fa-google w-3.5"
+            role="img"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 488 512"
+          >
+            <path
+              fill="currentColor"
+              d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"
+            ></path>
+          </svg>
+        </a>
+        <a href="#!" class="mr-9 text-gray-800">
+          <svg
+            aria-hidden="true"
+            focusable="false"
+            data-prefix="fab"
+            data-icon="instagram"
+            class="svg-inline--fa fa-instagram w-3.5"
+            role="img"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 448 512"
+          >
+            <path
+              fill="currentColor"
+              d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+            ></path>
+          </svg>
+        </a>
+        <a href="#!" class="mr-9 text-gray-800">
+          <svg
+            aria-hidden="true"
+            focusable="false"
+            data-prefix="fab"
+            data-icon="linkedin-in"
+            class="svg-inline--fa fa-linkedin-in w-3.5"
+            role="img"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 448 512"
+          >
+            <path
+              fill="currentColor"
+              d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
+            ></path>
+          </svg>
+        </a>
+        <a href="#!" class="text-gray-800">
+          <svg
+            aria-hidden="true"
+            focusable="false"
+            data-prefix="fab"
+            data-icon="github"
+            class="svg-inline--fa fa-github w-4"
+            role="img"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 496 512"
+          >
+            <path
+              fill="currentColor"
+              d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
+            ></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  
+    <div class="text-center text-gray-700 p-4" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2022 Copyright:
+      <a class="text-gray-800">Sylfia Putri</a>
+    </div>
+  </footer>
+
+    <!-- a little JS for the mobile nav button -->
+    <script>
+      if (document.getElementById("nav-mobile-btn")) {
+        document
+          .getElementById("nav-mobile-btn")
+          .addEventListener("click", function () {
+            if (this.classList.contains("close")) {
+              document.getElementById("nav").classList.add("hidden");
+              this.classList.remove("close");
+            } else {
+              document.getElementById("nav").classList.remove("hidden");
+              this.classList.add("close");
+            }
+          });
+      }
+    </script>
+  </body>
+</html>
